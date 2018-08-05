@@ -5,13 +5,16 @@
       
     </div>
     <div class="col-sm-8">
-      <form>
+      <form [formGroup]="regForm">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Delegation Name">
+          <input type="text" class="form-control" placeholder="Delegation Name" formControlName="delegation">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Head Delegate Full Name">
-          </div>
+            <input type="text" class="form-control" placeholder="Head Delegate Full Name" formControlName="headDelName">
+        </div>
+        <div class="form-group">
+          <button [disabled]="!regForm.valid" class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+        </div>
       </form>
     </div>
   </div>
