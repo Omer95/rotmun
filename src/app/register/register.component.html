@@ -1,16 +1,100 @@
 <div class="jumbotron">
   <h1>Registration Form</h1>
   <div class="row">
-    <div class= "col-sm-2">
-      
-    </div>
+    <div class= "col-sm-2"></div>
     <div class="col-sm-8">
       <form [formGroup]="regForm">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Delegation Name" formControlName="delegation">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Head Delegate Full Name" formControlName="headDelName">
+            <input type="text" class="form-control" placeholder="School/Institution" formControlName="institution">
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label">Head Delegate</label>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Full Name" formControlName="headDelName">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email Address" formControlName="headDelEmail">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Phone Number" formControlName="headDelPhone">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="CNIC/Bay Form Number" formControlName="headDelCnic">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Date of Birth" formControlName="headDelDob">
+        </div>
+        <div class="form-group">
+          <select class="form-control" formControlName="headDelPref1">
+            <option [ngValue]="null" disabled>Committee Preference 1</option>
+            <option *ngFor="let committee of committees; let i=index" [ngValue]="committee">
+              {{committee}}
+            </option>
+          </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control" formControlName="headDelPref2">
+              <option [ngValue]="null" disabled>Committee Preference 2</option>
+              <option *ngFor="let committee of committees; let i=index" [ngValue]="committee">
+                {{committee}}
+              </option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="control-label">Delegates</label>
+        </div>
+        <div class="form-group" *ngFor="let delegate of regForm.get('delegatesControl')['controls']; let i=index">
+          <div formArrayName="delegatesControl">
+              <form [formGroupName]="i">
+                  <div class="form-group">
+                    <h3>Delegate {{i+1}}</h3>
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Full Name" formControlName="delName">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Email Address" formControlName="delEmail">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Phone Number" formControlName="delPhone">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="CNIC/Bay Form Number" formControlName="delCnic">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Date of Birth" formControlName="delDob">
+                  </div>
+                  <div class="form-group">
+                    <select class="form-control" formControlName="delPref1">
+                      <option [ngValue]="null" disabled>Committee Preference 1</option>
+                      <option *ngFor="let committee of committees; let i=index" [ngValue]="committee">
+                        {{committee}}
+                      </option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                      <select class="form-control" formControlName="delPref2">
+                        <option [ngValue]="null" disabled>Committee Preference 2</option>
+                        <option *ngFor="let committee of committees; let i=index" [ngValue]="committee">
+                          {{committee}}
+                        </option>
+                      </select>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-success" type="button" (click)="removeDelegate(i)">Remove</button>
+                  </div>
+              </form>
+              <br>
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success" type="button" (click)="addDelegate()">Add Delegate</button>
         </div>
         <div class="form-group">
           <button [disabled]="!regForm.valid" class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
@@ -18,4 +102,5 @@
       </form>
     </div>
   </div>
+  <div class="col-sm-2"></div>
 </div>
