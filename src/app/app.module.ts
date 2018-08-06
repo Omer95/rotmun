@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToasterModule } from 'angular2-toaster';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -30,7 +32,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    BrowserAnimationsModule,
+    ToasterModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ToasterConfig } from 'angular2-toaster';
+import { timeout } from '../../node_modules/@types/q';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  public config: ToasterConfig = new ToasterConfig({
+    tapToDismiss: true,
+    timeout: 1500
+  });
 }
