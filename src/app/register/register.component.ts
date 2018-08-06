@@ -37,9 +37,30 @@ export class RegisterComponent implements OnInit {
     this.delService.getData();
   }
   submit() {
+    console.log(this.regForm);
     this.aDelegation = new Delegation();
     this.aDelegation.delegationName = this.regForm.get('delegation').value;
     this.aDelegation.headDelName = this.regForm.get('headDelName').value;
+    this.aDelegation.institution = this.regForm.get('institution').value;
+    this.aDelegation.headDelEmail = this.regForm.get('headDelEmail').value;
+    this.aDelegation.headDelPhone = this.regForm.get('headDelPhone').value;
+    this.aDelegation.headDelCnic = this.regForm.get('headDelCnic').value;
+    this.aDelegation.headDelDob = this.regForm.get('headDelDob').value;
+    this.aDelegation.headDelPref1 = this.regForm.get('headDelPref1').value;
+    this.aDelegation.headDelPref2 = this.regForm.get('headDelPref2').value;
+    for (let i = 0; i < this.regForm.value.delegatesControl.length; i++) {
+      const aDelegate: Delegate = new Delegate();
+      aDelegate.name = this.regForm.value.delegatesControl[i].delName;
+      aDelegate.email = this.regForm.value.delegatesControl[i].delEmail;
+      aDelegate.phone = this.regForm.value.delegatesControl[i].delPhone;
+      aDelegate.dob = this.regForm.value.delegatesControl[i].delDob;
+      aDelegate.cnic = this.regForm.value.delegatesControl[i].delCnic;
+      aDelegate.pref1 = this.regForm.value.delegatesControl[i].delPref1;
+      aDelegate.pref2 = this.regForm.value.delegatesControl[i].delPref2;
+      this.delegates.push(aDelegate);
+    }
+    this.aDelegation.delegates = this.delegates;
+    this.delegates = [];
     console.log(this.aDelegation);
     this.delService.insertDel(this.aDelegation);
   }

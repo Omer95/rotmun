@@ -16,7 +16,15 @@ export class DelegationService {
   insertDel(delegation: Delegation) {
     this.delegationList.push({
       delegationName: delegation.delegationName,
-      headDelName: delegation.headDelName
+      headDelName: delegation.headDelName,
+      institution: delegation.institution,
+      headDelEmail: delegation.headDelEmail,
+      headDelPhone: delegation.headDelPhone,
+      headDelCnic: delegation.headDelCnic,
+      headDelDob: delegation.headDelCnic,
+      headDelPref1: delegation.headDelPref1,
+      headDelPref2: delegation.headDelPref2,
+      delegates: delegation.delegates
     });
   }
 }
