@@ -21,7 +21,7 @@ export class DelegationService {
       headDelEmail: delegation.headDelEmail,
       headDelPhone: delegation.headDelPhone,
       headDelCnic: delegation.headDelCnic,
-      headDelDob: delegation.headDelCnic,
+      headDelDob: delegation.headDelDob,
       headDelPref1: delegation.headDelPref1,
       headDelPref2: delegation.headDelPref2,
       delegates: delegation.delegates
