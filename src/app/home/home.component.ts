@@ -1,3 +1,4 @@
+declare function require(path: string);
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
@@ -8,6 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  imageSrc = require('./img/instagram/ins-1.jpg');
   introImage: Observable<any>;
   constructor(private fireStorage: AngularFireStorage) {
     const ref = this.fireStorage.ref('intro.jpg');
