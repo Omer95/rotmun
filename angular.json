@@ -61,7 +61,7 @@
               "./sierra/js/theme.js",
               "./edusite/js/jquery.min.js",
 		          "./edusite/js/bootstrap.min.js",
-		          "./edusite/js/main.js"
+              "./edusite/js/main.js"
             ]
           },
           "configurations": {
