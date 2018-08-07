@@ -1,8 +1,12 @@
+<app-navbar></app-navbar>
+<!-- Backgound Image -->
+<div class="bg-image bg-parallax overlay" style="background-image:url('../../assets/edusite/img/home-background.jpg')"></div>
+<!-- /Backgound Image -->
 <div class="jumbotron">
   <h1>Registration Form</h1>
   <div class="row">
     <div class= "col-sm-2"></div>
-    <div class="col-sm-8">
+    <div class="col-sm-8" style="color:white;">
       <form [formGroup]="regForm">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Delegation Name" formControlName="delegation">

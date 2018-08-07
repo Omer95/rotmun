@@ -5,13 +5,15 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TeamComponent } from './team/team.component';
 import { RegisterComponent } from './register/register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
  { path: '', redirectTo: '/home', pathMatch: 'full'},
  { path: 'home', component: HomeComponent },
  { path: 'about', component: AboutComponent },
  { path: 'team', component: TeamComponent},
- { path: 'register', component: RegisterComponent }
+ { path: 'register', component: RegisterComponent },
+ { path: 'nav', component: NavbarComponent }
 ];
 
 @NgModule({
