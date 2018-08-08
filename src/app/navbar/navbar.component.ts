@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-
+  mobileView = false;
   constructor(private router: Router) { }
 
   ngOnInit() {
   }
   takeMeHome() {
     this.router.navigate(['/home']);
+  }
+  showSidebar() {
+    this.mobileView = !this.mobileView;
   }
 
 }

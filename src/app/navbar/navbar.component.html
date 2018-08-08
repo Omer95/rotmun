@@ -1,5 +1,5 @@
 <!-- Header -->
-<header id="header" class="transparent-nav">
+<header id="header" [ngClass]="{'transparent-nav': !mobileView, 'nav-collapse': mobileView}">
     <div class="container">
   
       <div class="navbar-header">
@@ -12,7 +12,7 @@
         <!-- /Logo -->
   
         <!-- Mobile toggle -->
-        <button class="navbar-toggle">
+        <button class="navbar-toggle" (click)="showSidebar()">
           <span></span>
         </button>
         <!-- /Mobile toggle -->
@@ -21,7 +21,7 @@
       <!-- Navigation -->
       <nav id="nav">
         <ul class="main-menu nav navbar-right">
-          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/home">Rotmun</a></li>
           <li><a routerLink="/about">About</a></li>
           <li><a routerLink="/register">Register</a></li>
           <li><a routerLink="/team">Team</a></li>
