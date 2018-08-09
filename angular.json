@@ -29,7 +29,8 @@
             "styles": [
               "src/styles.scss",
               "./edusite/css/font-awesome.min.css",
-              "./edusite/css/style.css"
+              "./edusite/css/style.css",
+              "./node_modules/animate.css/animate.min.css"
             ],
             "scripts": [
               "./edusite/js/jquery.min.js",

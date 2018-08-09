@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
 import * as $ from 'jquery';
+import { delay } from 'q';
 
 @Component({
   selector: 'app-home',
