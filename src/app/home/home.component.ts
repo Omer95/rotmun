@@ -2,6 +2,7 @@ declare function require(path: string);
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('#preloader').delay(600).fadeOut();
   }
 
 }

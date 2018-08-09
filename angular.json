@@ -28,40 +28,12 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./sierra/css/font-awesome.min.css",
-              "./sierra/css/bootstrap.min.css",
-              "./sierra/vendors/revolution/css/settings.css",
-              "./sierra/vendors/revolution/css/layers.css",
-              "./sierra/vendors/revolution/css/navigation.css",
-              "./sierra/vendors/owl-carousel/owl.carousel.min.css",
-              "./sierra/css/style.css",
-              "./sierra/css/responsive.css",
               "./edusite/css/font-awesome.min.css",
               "./edusite/css/style.css"
             ],
             "scripts": [
-              "./sierra/vendors/revolution/js/jquery.themepunch.tools.min.js",
-              "./sierra/vendors/revolution/js/jquery.themepunch.revolution.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.actions.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.video.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.layeranimation.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.navigation.min.js",
-              "./sierra/vendors/revolution/js/extensions/revolution.extension.slideanims.min.js",
-              "./sierra/js/jquery-3.2.1.min.js",
-              "./sierra/js/popper.min.js",
-              "./sierra/js/bootstrap.min.js",
-              "./sierra/vendors/counterup/jquery.waypoints.min.js",
-              "./sierra/vendors/counterup/jquery.counterup.min.js", 
-              "./sierra/vendors/counterup/apear.js",
-              "./sierra/vendors/counterup/countto.js",
-              "./sierra/vendors/owl-carousel/owl.carousel.min.js",
-              "./sierra/vendors/magnify-popup/jquery.magnific-popup.min.js",
-              "./sierra/js/smoothscroll.js",
-              "./sierra/js/theme.js",
               "./edusite/js/jquery.min.js",
-		          "./edusite/js/bootstrap.min.js",
-              "./edusite/js/main.js"
+		          "./edusite/js/bootstrap.min.js"
             ]
           },
           "configurations": {

@@ -4,6 +4,7 @@ import { Delegation } from '../shared/delegation.model';
 import { DelegationService } from '../shared/delegation.service';
 import { ToasterService, Toast } from 'angular2-toaster';
 import { Delegate } from '../shared/delegate.model';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-register',
@@ -22,6 +23,7 @@ export class RegisterComponent implements OnInit {
             ) { }
 
   ngOnInit() {
+    $('#preloader').delay(600).fadeOut();
     this.regForm = this.fb.group({
       delegation: [undefined, Validators.required],
       institution: [undefined, Validators.required],
