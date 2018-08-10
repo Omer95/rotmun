@@ -9,3 +9,7 @@
   height:510px;
    overflow:auto;
 }
+.gradient {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#374050), to(#798696));
+	background-image: linear-gradient(to bottom, #374050 0%, #798696 100%);
+}

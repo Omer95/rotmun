@@ -366,7 +366,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 .navbar-toggle > span , .navbar-toggle > span:before , .navbar-toggle > span:after {
 	height: 2px;
 	width: 25px;
-	background-color:#374050;
+	background-color: gray;
 }
 
 .navbar-toggle > span:before {
