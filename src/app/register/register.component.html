@@ -1,14 +1,15 @@
 <app-navbar></app-navbar>
 <!-- Backgound Image -->
-<div class="bg-image bg-parallax overlay" style="background-image:url('../../assets/edusite/img/home-background.jpg')"></div>
+<div class="bg-image bg-parallax overlay" style="background-image:url('../../assets/ibacity.jpg')"></div>
 <!-- /Backgound Image -->
-<div class="jumbotron">
-  <h1>Registration Form</h1>
+<div class="jumbotron" style="padding-top: 100px;">
   <div class="row">
-    <div class= "col-sm-2"></div>
-    <div class="col-sm-8" style="color:white;">
-      <form [formGroup]="regForm">
+    <div class= "col-sm-3">
+    </div>
+    <div class="col-sm-6 FixedHeightContainer" style="color:white;">
+      <form [formGroup]="regForm" class="Content">
         <div class="form-group">
+            <h1 class="white-text">Registration Form</h1>
           <input type="text" class="form-control" placeholder="Delegation Name" formControlName="delegation">
         </div>
         <div class="form-group">
@@ -16,7 +17,7 @@
         </div>
         <br>
         <div class="form-group">
-            <label class="control-label">Head Delegate</label>
+            <label class="control-label">Head Delegate/Private Delegate</label>
         </div>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Full Name" formControlName="headDelName">
@@ -99,11 +100,11 @@
               <br>
           </div>
         </div>
-        <div class="form-group">
+        <div class="col-md-6" style="padding: 0px">
           <button class="btn btn-success" type="button" (click)="addDelegate()">Add Delegate</button>
         </div>
-        <div class="form-group">
-          <button [disabled]="!regForm.valid" class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
+        <div class="text-right">
+            <button [disabled]="!regForm.valid" class="btn btn-primary" type="submit" (click)="submit()">Submit</button>
         </div>
       </form>
     </div>
@@ -111,3 +112,71 @@
   <div class="col-sm-2"></div>
 </div>
 <div id='preloader'><div class='preloader'></div></div>
+
+<!-- Footer -->
+<footer id="footer" class="section">
+
+    <!-- container -->
+    <div class="container">
+  
+      <!-- row -->
+      <div class="row">
+  
+        <!-- footer logo -->
+        <div class="col-md-6">
+          <div class="footer-logo">
+            <a class="logo" href="index.html">
+              <img src="assets/edusite/img/logo.png" alt="logo">
+            </a>
+          </div>
+        </div>
+        <!-- footer logo -->
+  
+        <!-- footer nav -->
+        <div class="col-md-6">
+          <ul class="footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <!-- /footer nav -->
+  
+      </div>
+      <!-- /row -->
+  
+      <!-- row -->
+      <div id="bottom-footer" class="row">
+  
+        <!-- social -->
+        <div class="col-md-4 col-md-push-8">
+          <ul class="footer-social">
+            <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#" class="youtube"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <!-- /social -->
+  
+        <!-- copyright -->
+        <div class="col-md-8 col-md-pull-4">
+          <div class="footer-copyright">
+            <span>&copy; Copyright 2018. This website was made real quick by <a href="https://www.facebook.com/OmerFA">Omer Farooq Ahmed</a><br>
+              &copy; Copyright 2018. All Rights Reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></span>
+          </div>
+        </div>
+        <!-- /copyright -->
+  
+      </div>
+      <!-- row -->
+  
+    </div>
+    <!-- /container -->
+  
+  </footer>
+  <!-- /Footer -->

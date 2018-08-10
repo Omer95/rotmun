@@ -1,1 +1,11 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+.FixedHeightContainer {
+  float:right;
+  height: 642px;
+  width:510px; 
+  padding:10px;
+}
+.Content {
+  height:510px;
+   overflow:auto;
+}

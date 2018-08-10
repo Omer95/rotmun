@@ -39,7 +39,7 @@ export class RegisterComponent implements OnInit {
     this.delService.getData();
   }
   submit() {
-    console.log(this.regForm);
+    // console.log(this.regForm);
     this.aDelegation = new Delegation();
     this.aDelegation.delegationName = this.regForm.get('delegation').value;
     this.aDelegation.headDelName = this.regForm.get('headDelName').value;
@@ -65,6 +65,9 @@ export class RegisterComponent implements OnInit {
     this.delegates = [];
     console.log(this.aDelegation);
     this.delService.insertDel(this.aDelegation);
+    this.toasterService.pop('success', 'Success',
+      `Thank you for registering your delegation of ${this.delegateCount + 1} delegates`);
+    this.regForm.reset();
   }
   addDelegate() {
     if (this.delegateCount < 9) {
