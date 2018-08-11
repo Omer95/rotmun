@@ -38,7 +38,7 @@
     <!-- row -->
     <div class="row">
 
-      <div class="col-md-6" #test [ngClass]="{'col-md-6 animated pulse': showAnimation, 'col-md-6': !showAnimation}">
+      <div class="col-md-12" #test [ngClass]="{'col-md-6 animated pulse': showAnimation, 'col-md-6': !showAnimation}">
         <div class="section-header">
           <h2>Welcome to Edusite</h2>
           <p class="lead">Libris vivendo eloquentiam ex ius, nec id splendide abhorreant.</p>
@@ -76,14 +76,57 @@
 
       </div>
 
-      <div class="col-md-6">
-        <div class="about-img">
-          <img src="assets/edusite/img/about.png" alt="">
-        </div>
-      </div>
 
     </div>
     <!-- row -->
+
+    <!-- executive council images-->
+    <div class="row">
+      <div [ngClass]="{'col-md-4 invisible': !showAlina, 'col-md-4 visible': showAlina}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showAlina}" #alina>
+          <div class="about-img" style="width: 300px; height: 300px;">
+            <img src="assets/alina2.png" alt="alina">
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'col-md-4 invisible': !showHebah, 'col-md-4 visible': showHebah}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showHebah}" #hebah>
+          <div class="about-img" style="width: 300px; height: 300px;">
+            <img src="assets/hebah.png" alt="hebah">
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'col-md-4 invisible': !showShariq, 'col-md-4 visible': showShariq}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showShariq}" #pres>
+          <div class="about-img">
+            <img src="assets/shariq.jpg" alt="shariq" style="height: 437px; width: 300px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div [ngClass]="{'col-md-4 invisible': !showAli, 'col-md-4 visible': showAli}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showAli}" #ali>
+          <div class="about-img" style="width: 300px; height: 300px;">
+            <img src="assets/ali.png" alt="ali">
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'col-md-4 invisible': !showJami, 'col-md-4 visible': showJami}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showJami}" #jami>
+          <div class="about-img" style="width: 300px; height: 300px;">
+            <img src="assets/jami.png" alt="jami">
+          </div>
+        </div>
+      </div>
+      <div [ngClass]="{'col-md-4 invisible': !showSaba, 'col-md-4 visible': showSaba}" style="height:550px;">
+        <div [ngClass]="{'animated fadeInLeft': showSaba}" #pres>
+          <div class="about-img">
+            <img src="assets/saba.png" alt="saba" style="height: 437px; width: 300px;">
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
   <!-- container -->
