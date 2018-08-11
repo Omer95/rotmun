@@ -15,6 +15,7 @@ import { TeamComponent } from './team/team.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     NavbarComponent,
     TeamComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFireDatabaseModule,
     BrowserAnimationsModule,
     ToasterModule.forRoot(),
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCGeXWC8rb1ycEmVbpj-UYXUZ62W9Q2NPo'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

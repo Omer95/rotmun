@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   showAli = false;
   showJami = false;
   showSaba = false;
+  lat: Number = 24.867097;
+  lng: Number = 67.025804;
 
   constructor(private fireStorage: AngularFireStorage) {
     const ref = this.fireStorage.ref('intro.jpg');
@@ -59,7 +61,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (window.pageYOffset >= this.hebahEl.nativeElement.offsetTop) {
         setTimeout( () => {
           this.showShariq = true;
-        }, 800);
+        }, 600);
         // this.showHebah = true;
       } else {
         this.showShariq = false;
@@ -82,7 +84,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       if (window.pageYOffset >= this.jamiEl.nativeElement.offsetTop) {
         setTimeout( () => {
           this.showSaba = true;
-        }, 800);
+        }, 600);
         // this.showHebah = true;
       } else {
         this.showSaba = false;
