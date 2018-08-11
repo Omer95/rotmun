@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AgmCoreModule } from '@agm/core';
+import { ConferenceComponent } from './conference/conference.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { AgmCoreModule } from '@agm/core';
     TeamComponent,
     FooterComponent,
     RegisterComponent,
+    ConferenceComponent,
   ],
   imports: [
     BrowserModule,

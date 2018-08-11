@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-team',
@@ -10,6 +11,7 @@ export class TeamComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $('#preloader').delay(600).fadeOut();
   }
 
 }

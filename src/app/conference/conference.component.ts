@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  selector: 'app-conference',
+  templateUrl: './conference.component.html',
+  styleUrls: ['./conference.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class ConferenceComponent implements OnInit {
 
   constructor() { }
 
