@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit {
   lat: Number = 24.867097;
   lng: Number = 67.025804;
 
-  constructor() {}
+
+  constructor() {
+  }
   @ViewChildren('test, test2') testElement: QueryList<any>;
   @ViewChild('alina') alinaEl;
   @ViewChild('hebah') hebahEl;
