@@ -1,6 +1,6 @@
 const functions = require('firebase-functions');
 const firebaseConfig = JSON.parse(process.env.FIREBASE_CONFIG);
-const SENDGRID_API_KEY = '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';
+const SENDGRID_API_KEY = functions.config().sendgrid.key;
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(SENDGRID_API_KEY);
 const cors = require('cors')({ origin: true });
@@ -11,8 +11,8 @@ admin.initializeApp();
 exports.rotmunEmail = functions.database.ref('/delegations/{}')
 .onCreate( (snapshot, context) => {
     const email = snapshot._data.headDelEmail;
-    console.log('function triggered', snapshot);
     const name = snapshot._data.headDelName;
+    console.log('function triggered '+email+' '+name);
     const msg = {
         to: email,
         from: 'registration@rotmun2018.com',
