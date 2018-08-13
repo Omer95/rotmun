@@ -62,6 +62,11 @@ export class RegisterComponent implements OnInit {
       this.delegates.push(aDelegate);
     }
     this.aDelegation.delegates = this.delegates;
+    if (this.delegateCount === 0) {
+      this.aDelegation.fee = 3500;
+    } else {
+      this.aDelegation.fee = 3000 * (this.delegateCount + 1) + 500 * (this.delegateCount + 1);
+    }
     this.delegates = [];
     console.log(this.aDelegation);
     this.delService.insertDel(this.aDelegation);

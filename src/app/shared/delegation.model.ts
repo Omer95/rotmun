@@ -10,5 +10,6 @@ export class Delegation {
     headDelDob: string;
     headDelPref1: string;
     headDelPref2: string;
+    fee: Number;
     delegates: Array<Delegate>;
 }

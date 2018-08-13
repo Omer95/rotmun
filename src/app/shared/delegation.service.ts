@@ -24,6 +24,7 @@ export class DelegationService {
       headDelDob: delegation.headDelDob,
       headDelPref1: delegation.headDelPref1,
       headDelPref2: delegation.headDelPref2,
+      delegationFee: delegation.fee,
       delegates: delegation.delegates
     });
   }
