@@ -12,14 +12,32 @@ exports.rotmunEmail = functions.database.ref('/delegations/{}')
 .onCreate( (snapshot, context) => {
     const email = snapshot._data.headDelEmail;
     const name = snapshot._data.headDelName;
+    const fee = snapshot._data.delegationFee;
     console.log('function triggered '+email+' '+name);
     const msg = {
-        to: email,
+        // substitutionWrappers: ['{{', '}}'],
+        // to: email,
+        // from: 'registration@rotmun2018.com',
+        // templateId: 'd-50602fa35b2649ea8301d558ea230d21',
+        // substitutions: {
+        //     age: '3',
+        //     name: 'omer'
+        // }
         from: 'registration@rotmun2018.com',
         templateId: 'd-50602fa35b2649ea8301d558ea230d21',
-        substitutions: {
-            name: name
-        }
+        personalizations: [
+            {
+                to: [
+                    {
+                        email: email
+                    }
+                ],
+                dynamic_template_data: {
+                    name: name,
+                    price: fee
+                }
+            }
+        ]
     };
     return sgMail.send(msg)
     .then(() => {
