@@ -7,6 +7,7 @@ import { TeamComponent } from './team/team.component';
 import { RegisterComponent } from './register/register.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ConferenceComponent } from './conference/conference.component';
+import { CommitteesComponent } from './committees/committees.component';
 
 const routes: Routes = [
  { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
  { path: 'about', component: AboutComponent },
  { path: 'team', component: TeamComponent},
  { path: 'register', component: RegisterComponent },
- { path: 'conference', component: ConferenceComponent}
+ { path: 'conference', component: ConferenceComponent},
+ { path: 'committees', component: CommitteesComponent}
 ];
 
 @NgModule({

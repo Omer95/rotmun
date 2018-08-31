@@ -14,7 +14,12 @@ import * as $ from 'jquery';
 export class RegisterComponent implements OnInit {
   regForm: FormGroup;
   aDelegation: Delegation;
-  committees = ['DISEC', 'WHO', 'UNSC', 'NATO', 'ECOSOC'];
+  committees = ['DISEC', 'SOCHUM', 'SPECPOL', 'UNESCO', 'UNSC',
+                'UN Commission on the Status of Women',
+                'Historical Corporate Committee: The Great Depression 1929',
+                // tslint:disable-next-line:quotemark
+                'IAEA', "Prime Minister Imran Khan's Cabinet 2018",
+                'Committee on the Peaceful Uses of Outer Space'];
   delegates: Array<Delegate> = [];
   delegateCount = 0;
   constructor(private fb: FormBuilder,
