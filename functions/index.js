@@ -14,6 +14,7 @@ exports.rotmunEmail = functions.database.ref('/delegations/{}')
     const name = snapshot._data.headDelName;
     console.log(snapshot);
     const fee = snapshot._data.delegationFee;
+    const id = (snapshot._path).substring(13);
     console.log('function triggered '+email+' '+name);
     const msg = {
         // substitutionWrappers: ['{{', '}}'],
@@ -35,7 +36,8 @@ exports.rotmunEmail = functions.database.ref('/delegations/{}')
                 ],
                 dynamic_template_data: {
                     name: name,
-                    price: fee
+                    price: fee,
+                    delId: id
                 }
             }
         ]
