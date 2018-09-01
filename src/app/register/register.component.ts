@@ -77,6 +77,7 @@ export class RegisterComponent implements OnInit {
       this.aDelegation.fee = 2800 * (this.delegateCount + 1) + 2000;
     }
     this.delegates = [];
+    console.log(this.aDelegation);
     this.delService.insertDel(this.aDelegation);
     this.toasterService.pop('success', 'Success',
       `Thank you for registering your delegation of ${this.delegateCount + 1} delegates`);
@@ -97,6 +98,8 @@ export class RegisterComponent implements OnInit {
         this.toasterService.pop('error', 'Limit Reached', 'A maximum of 10 delegates are allowed per delegation');
       }
     }
+    console.log(this.regForm.get('delegatesControl'));
+    console.log(this.delegateCount);
   }
   removeDelegate(index: number) {
     if (this.delegateCount > 3) {
@@ -108,6 +111,7 @@ export class RegisterComponent implements OnInit {
       (this.regForm.get('delegatesControl') as FormArray).removeAt(0);
       this.delegateCount -= 3;
     }
+    console.log(this.delegateCount);
   }
   getDelegateForm() {
     const delegateForm = this.fb.group({

@@ -12,6 +12,7 @@ exports.rotmunEmail = functions.database.ref('/delegations/{}')
 .onCreate( (snapshot, context) => {
     const email = snapshot._data.headDelEmail;
     const name = snapshot._data.headDelName;
+    console.log(snapshot);
     const fee = snapshot._data.delegationFee;
     console.log('function triggered '+email+' '+name);
     const msg = {
