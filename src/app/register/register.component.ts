@@ -74,7 +74,7 @@ export class RegisterComponent implements OnInit {
     if (this.delegateCount === 0) {
       this.aDelegation.fee = 3500;
     } else {
-      this.aDelegation.fee = 3000 * (this.delegateCount + 1) + 500 * (this.delegateCount + 1);
+      this.aDelegation.fee = 2800 * (this.delegateCount + 1) + 2000;
     }
     this.delegates = [];
     console.log(this.aDelegation);
@@ -84,16 +84,34 @@ export class RegisterComponent implements OnInit {
     this.regForm.reset();
   }
   addDelegate() {
-    if (this.delegateCount < 9) {
-      (this.regForm.get('delegatesControl') as FormArray).push(this.getDelegateForm());
-      this.delegateCount += 1;
+    if (this.delegateCount === 0) {
+      // there must be atleast 4 delegates in one delegation
+      for (let i = 0; i < 3; i++) {
+        (this.regForm.get('delegatesControl') as FormArray).push(this.getDelegateForm());
+      }
+      this.delegateCount += 3;
     } else {
-      this.toasterService.pop('error', 'Limit Reached', 'A maximum of 10 delegates are allowed per delegation');
+      if (this.delegateCount >= 3 && this.delegateCount < 9) {
+        (this.regForm.get('delegatesControl') as FormArray).push(this.getDelegateForm());
+        this.delegateCount += 1;
+      } else {
+        this.toasterService.pop('error', 'Limit Reached', 'A maximum of 10 delegates are allowed per delegation');
+      }
     }
+    console.log(this.regForm.get('delegatesControl'));
+    console.log(this.delegateCount);
   }
   removeDelegate(index: number) {
-    (this.regForm.get('delegatesControl') as FormArray).removeAt(index);
-    this.delegateCount -= 1;
+    if (this.delegateCount > 3) {
+      (this.regForm.get('delegatesControl') as FormArray).removeAt(index);
+      this.delegateCount -= 1;
+    } else {
+      (this.regForm.get('delegatesControl') as FormArray).removeAt(0);
+      (this.regForm.get('delegatesControl') as FormArray).removeAt(0);
+      (this.regForm.get('delegatesControl') as FormArray).removeAt(0);
+      this.delegateCount -= 3;
+    }
+    console.log(this.delegateCount);
   }
   getDelegateForm() {
     const delegateForm = this.fb.group({
