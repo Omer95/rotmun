@@ -29,6 +29,10 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit() {
     $('#preloader').delay(600).fadeOut();
+    setTimeout(() => {
+      $('.smallfont').addClass('animated fadeInDown');
+      $('.myform').addClass('animated fadeInDown');
+    }, 600);
     this.regForm = this.fb.group({
       delegation: [undefined, Validators.required],
       institution: [undefined, Validators.required],

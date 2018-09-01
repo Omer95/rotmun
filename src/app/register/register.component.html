@@ -26,7 +26,7 @@
     <div class= "col-sm-3">
     </div>
     <div class="col-sm-6" style="color:white;">
-      <form [formGroup]="regForm" class="animated pulse">
+      <form [formGroup]="regForm" class="myform">
         <div class="form-group">
             <h1 class="white-text">Registration Form</h1>
           <input type="text" class="form-control" placeholder="Delegation Name" formControlName="delegation">
@@ -78,7 +78,7 @@
           <div formArrayName="delegatesControl">
               <form [formGroupName]="i">
                   <div class="form-group">
-                    <h3>Delegate {{i+1}}</h3>
+                    <h3>Delegate {{i+2}}</h3>
                   </div>
                   <div class="form-group">
                       <input type="text" class="form-control" placeholder="Full Name" formControlName="delName">
