@@ -12,6 +12,7 @@ export class TeamComponent implements OnInit {
 
   ngOnInit() {
     $('#preloader').delay(600).fadeOut();
+    $('.container').delay(600).addClass('animated fadeInDown');
   }
 
 }
