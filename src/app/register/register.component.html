@@ -7,9 +7,9 @@
     <div class="col-sm-3"></div>
     <div class="col-sm-6 smallfont" style="color: white; text-align: center;">
       <h1><strong>Registration Instructions:</strong></h1>
-      <p>Registration fee for <strong>private delegates</strong> is <strong>3500 PKR</strong>. Private delegates need to fill their
+      <p>Registration fee for <strong>private delegates</strong> is <strong>3000 PKR</strong>. Private delegates need to fill their
         details in Head Delegate fields and submit, without adding any additional delegates. Simply add "private" to both delegation name and school/institution fields</p>
-      <p>Registration fee for delegation is as follows: <strong>2800 PKR per individual delegate</strong> including
+      <p>Registration fee for delegation is as follows: <strong>2500 PKR per individual delegate</strong> including
         head delegate and <strong>2000 PKR delegation fee</strong>.</p>
       <p>Minimum number of delegates in a delegation is 4 and maximum is 10. All head delegates/private delegates will be sent an automated email with their delegation's (or personal in case of private delegate) receipt. Please check spam if the email does
         not appear in your inbox.</p>
@@ -70,6 +70,13 @@
                 {{committee}}
               </option>
             </select>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Faculty Adviser (Optional)</label>
+          <input type="text" class="form-control" placeholder="Facutly Advisor Name" formControlName="facultyName">          
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Facutly Advisor Phone Number" formControlName="facultyPhone">
         </div>
         <br>
         <div class="form-group">

@@ -11,5 +11,7 @@ export class Delegation {
     headDelPref1: string;
     headDelPref2: string;
     fee: Number;
+    facultyName: string;
+    facultyPhone: string;
     delegates: Array<Delegate>;
 }

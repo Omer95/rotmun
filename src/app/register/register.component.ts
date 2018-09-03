@@ -43,6 +43,8 @@ export class RegisterComponent implements OnInit {
       headDelDob: [undefined, Validators.required],
       headDelPref1: [undefined, Validators.required],
       headDelPref2: [undefined, Validators.required],
+      facultyName: [undefined],
+      facultyPhone: [undefined],
       delegatesControl: this.fb.array([])
     });
     this.delService.getData();
@@ -59,6 +61,16 @@ export class RegisterComponent implements OnInit {
     this.aDelegation.headDelDob = this.regForm.get('headDelDob').value;
     this.aDelegation.headDelPref1 = this.regForm.get('headDelPref1').value;
     this.aDelegation.headDelPref2 = this.regForm.get('headDelPref2').value;
+    if (this.regForm.get('facultyName')) {
+      this.aDelegation.facultyName = this.regForm.get('facultyName').value;
+    } else {
+      this.aDelegation.facultyName = 'none';
+    }
+    if (this.regForm.get('facultyPhone')) {
+      this.aDelegation.facultyPhone = this.regForm.get('facultyPhone').value;
+    } else {
+      this.aDelegation.facultyPhone = 'none';
+    }
     for (let i = 0; i < this.regForm.value.delegatesControl.length; i++) {
       const aDelegate: Delegate = new Delegate();
       aDelegate.name = this.regForm.value.delegatesControl[i].delName;
@@ -72,9 +84,9 @@ export class RegisterComponent implements OnInit {
     }
     this.aDelegation.delegates = this.delegates;
     if (this.delegateCount === 0) {
-      this.aDelegation.fee = 3500;
+      this.aDelegation.fee = 3000;
     } else {
-      this.aDelegation.fee = 2800 * (this.delegateCount + 1) + 2000;
+      this.aDelegation.fee = 2500 * (this.delegateCount + 1) + 2000;
     }
     this.delegates = [];
     console.log(this.aDelegation);

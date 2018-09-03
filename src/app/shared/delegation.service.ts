@@ -25,7 +25,9 @@ export class DelegationService {
       headDelPref1: delegation.headDelPref1,
       headDelPref2: delegation.headDelPref2,
       delegationFee: delegation.fee,
-      delegates: delegation.delegates
+      delegates: delegation.delegates,
+      facultyName: delegation.facultyName,
+      facultyPhone: delegation.facultyPhone
     });
   }
 }
