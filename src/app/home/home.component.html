@@ -106,6 +106,16 @@
         </div>
       </div>
     </div>
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div [ngClass]="{'col-md-4 invisible': !showZain, 'col-md-4 visible': showZain}" style="height:550px;">
+            <div [ngClass]="{'animated fadeInLeft': showZain}" #zain>
+              <div class="about-img" style="width: 300px; height: 300px;">
+                <img src="assets/zain.jpg" alt="zain">
+              </div>
+            </div>
+          </div>
+    </div>
 
   </div>
   <!-- container -->

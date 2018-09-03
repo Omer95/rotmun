@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   showAli = false;
   showJami = false;
   showSaba = false;
+  showZain = false;
   lat: Number = 24.867097;
   lng: Number = 67.025804;
 
@@ -28,6 +29,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('ali') aliEl;
   @ViewChild('jami') jamiEl;
   @ViewChild('saba') sabaEl;
+  @ViewChild('zain') zainEl;
   @HostListener('window:scroll', [])
     onscroll() {
       this.testElement.forEach( (anElement) => {
@@ -82,6 +84,13 @@ export class HomeComponent implements OnInit {
         // this.showHebah = true;
       } else {
         this.showSaba = false;
+      }
+      if (window.pageYOffset >= this.zainEl.nativeElement.offsetTop) {
+        setTimeout( () => {
+          this.showZain = true;
+        }, 200);
+      } else {
+        this.showZain = false;
       }
     }
 
