@@ -84,9 +84,9 @@ export class RegisterComponent implements OnInit {
     }
     this.aDelegation.delegates = this.delegates;
     if (this.delegateCount === 0) {
-      this.aDelegation.fee = 3000;
+      this.aDelegation.fee = 2700; // 2700 for early bird, 3000 regular
     } else {
-      this.aDelegation.fee = 2500 * (this.delegateCount + 1) + 2000;
+      this.aDelegation.fee = 2500 * (this.delegateCount + 1) + 0; // 2000 replaces 0 after early bird
     }
     this.delegates = [];
     console.log(this.aDelegation);
