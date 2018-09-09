@@ -18,6 +18,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AgmCoreModule } from '@agm/core';
 import { ConferenceComponent } from './conference/conference.component';
 import { CommitteesComponent } from './committees/committees.component';
+import { TimerComponent } from './timer/timer.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CommitteesComponent } from './committees/committees.component';
     FooterComponent,
     RegisterComponent,
     ConferenceComponent,
-    CommitteesComponent
+    CommitteesComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('jami') jamiEl;
   @ViewChild('saba') sabaEl;
   @ViewChild('zain') zainEl;
+  @ViewChild('timer') timer;
   @HostListener('window:scroll', [])
     onscroll() {
       this.testElement.forEach( (anElement) => {
@@ -95,6 +96,7 @@ export class HomeComponent implements OnInit {
     }
 
   ngOnInit() {
+    $('.apptimer').addClass('animated infinite pulse');
     $('#preloader').delay(2000).fadeOut();
     setTimeout(() => {
       $('.logo-fade').addClass('animated fadeInRight');
