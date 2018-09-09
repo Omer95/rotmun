@@ -11,11 +11,11 @@ export class CommitteesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('#preloader').delay(600).fadeOut();
+    $('#preloader').delay(2000).fadeOut();
     setTimeout(() => {
       $('.yellow-text').addClass('animated fadeInDown');
       $('.demo').addClass('animated fadeInLeft');
-    }, 600);
+    }, 2000);
   }
 
 }

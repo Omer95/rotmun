@@ -95,7 +95,11 @@ export class HomeComponent implements OnInit {
     }
 
   ngOnInit() {
-    $('#preloader').delay(600).fadeOut();
+    $('#preloader').delay(2000).fadeOut();
+    setTimeout(() => {
+      $('.logo-fade').addClass('animated fadeInRight');
+      $('.text-fade').addClass('animated fadeInLeft');
+    }, 2000);
   }
 
 }
