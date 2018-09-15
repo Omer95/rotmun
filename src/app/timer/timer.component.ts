@@ -43,7 +43,7 @@ export class TimerComponent implements OnInit {
       updateClock();
       const timeinterval = setInterval(updateClock, 1000);
     }
-    const deadline = new Date(2018, 8, 14, 23, 59, 59, 59);
+    const deadline = new Date(2018, 9, 11, 8, 59, 59, 59);
     initializeClock('clockdiv', deadline);
   }
 
