@@ -1,0 +1,36 @@
+.btn-doc {
+    background-color: #dcb160;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 3% 25%;
+    margin: 2%;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.btn-doc span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btn-doc span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btn-doc:hover span {
+    padding-right: 25px;
+  }
+  
+  .btn-doc:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
