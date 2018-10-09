@@ -137,5 +137,8 @@ export class RegisterComponent implements OnInit {
     });
     return delegateForm;
   }
+  formDisabled() {
+    this.toasterService.pop('error', 'Deadline Passed!', 'ROTMUN is no longer accepting registrations');
+  }
 
 }
