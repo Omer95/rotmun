@@ -15,7 +15,7 @@ const routes: Routes = [
  { path: 'about', component: AboutComponent },
  { path: 'team', component: TeamComponent},
  { path: 'register', component: RegisterComponent },
- { path: 'conference', component: ConferenceComponent},
+ { path: 'files', component: ConferenceComponent},
  { path: 'committees', component: CommitteesComponent}
 ];
 
